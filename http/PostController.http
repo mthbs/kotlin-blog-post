@@ -1,0 +1,38 @@
+PUT http://localhost:8080/api/v1/post
+Content-Type: application/json
+
+{
+  "content" : "Hello World!",
+  "isHtml" : false,
+  "author" : {
+    "name": "Jim",
+    "surname" : "Smith"
+  }
+}
+###
+DELETE http://localhost:8080/api/v1/post/64281accd2102e5cd6f4912a
+
+###
+POST http://localhost:8080/api/v1/post
+Content-Type: application/json
+
+{
+  "id": "64281b4bd2102e5cd6f4912b",
+  "content": "Hello Universe!",
+  "creationDate": "2023-04-01T11:53:47.875+00:00",
+  "isHtml": false,
+  "author": {
+    "name": "Jim",
+    "surname": "Smith"
+  }
+}
+
+###
+POST http://localhost:8080/api/v1/post/search
+Content-Type: application/json
+
+{
+  "author": {
+    "name": "Jim"
+  }
+}
